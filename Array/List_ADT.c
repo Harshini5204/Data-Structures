@@ -40,149 +40,85 @@ void main()
     } 
     printf("\n Do u want to continue:::"); 
     scanf("\n%c", &g); 
-
-} 
-while(g=='y'||g=='Y'); 
-getch(); 
+  } 
+    while(g=='y'||g=='Y');
+  getch(); 
 } 
 
 void create() 
 { 
- printf("\n Enter the number of nodes"); 
-scanf("%d", &n); 
-for(i=0;i<n;i++) 
-{  
-printf("\n Enter the Element:",i+1); 
-scanf("%d", &b[i]); 
-
-} 
-
+  printf("\n Enter the number of nodes");
+  scanf("%d", &n); 
+  for(i=0;i<n;i++) 
+  {  
+    printf("\n Enter the Element:",i+1); 
+    scanf("%d", &b[i]); 
+  } 
 } 
 
 void deletion() 
-
 { 
-
-printf("\n Enter the position u want to delete::"); 
-
-scanf("%d", &pos); 
-
-if(pos>=n) 
-
-{  
-
-printf("\n Invalid Location::"); 
-
-} 
-
-else 
-
-{ 
-
-for(i=pos+1;i<n;i++) 
-
-{ 
-
-                                    b[i-1]=b[i]; 
-
-} 
-
-n--; 
-
-} 
-
- printf("\n The Elements after deletion"); 
-
-for(i=0;i<n;i++) 
-
-{ 
-
- printf("\t%d", b[i]); 
-
-} 
-
+  printf("\n Enter the position u want to delete::"); 
+  scanf("%d", &pos); 
+  if(pos>=n) 
+  {  
+    printf("\n Invalid Location::"); 
+  } 
+  else 
+  { 
+    for(i=pos+1;i<n;i++) 
+    { 
+      b[i-1]=b[i]; 
+    } 
+    n--; 
+  } 
+  printf("\n The Elements after deletion"); 
+  for(i=0;i<n;i++) 
+  { 
+    printf("\t%d", b[i]); 
+  } 
 } 
 
 void search() 
-
 { 
-
- printf("\n Enter the Element to be searched:"); 
-
-scanf("%d", &e); 
-
-for(i=0;i<n;i++) 
-
-{ 
-
-if(b[i]==e) 
-
-{ 
-
- printf("Value is in the %d Position", i); 
-
-} 
-
-} 
-
+  printf("\n Enter the Element to be searched:"); 
+  scanf("%d", &e); 
+  for(i=0;i<n;i++) 
+  { 
+    if(b[i]==e) 
+    { 
+      printf("Value is in the %d Position", i); 
+    } 
+  } 
 } 
 
 void insert() 
-
 { 
-
- printf("\n Enter the position u need to insert::"); 
-
-scanf("%d", &pos); 
-
-if(pos>=n) 
-
-{  
-
-printf("\n invalid Location::"); 
-
-} 
-
- else 
-
-{ 
-
-for(i=MAX-1;i>=pos-1;i--) 
-
-{ 
-
- 
-
- b[i+1]=b[i]; 
-
-} 
-
- printf("\n Enter the element to insert::\n"); 
-
-scanf("%d",&p);  
-
-b[pos]=p;n++; 
-
-}  
-
-printf("\n The list after insertion::\n"); 
-
-display(); 
-
+  printf("\n Enter the position u need to insert::"); 
+  scanf("%d", &pos); 
+  if(pos>=n) 
+  {  
+    printf("\n invalid Location::"); 
+  } 
+  else 
+  { 
+    for(i=MAX-1;i>=pos-1;i--) 
+    { 
+      b[i+1]=b[i]; 
+    } 
+    printf("\n Enter the element to insert::\n"); 
+    scanf("%d",&p);  
+    b[pos]=p;n++; 
+  }  
+  printf("\n The list after insertion::\n"); 
+  display(); 
 } 
 
 void display() 
-
 { 
-
- printf("\n The Elements of The list ADT are:"); 
-
-for(i=0;i<n;i++) 
-
-{ 
-
- printf("\n\n%d", b[i]); 
-
-} 
-
+  printf("\n The Elements of The list ADT are:"); 
+  for(i=0;i<n;i++) 
+  { 
+    printf("\n\n%d", b[i]); 
+  } 
 } 
